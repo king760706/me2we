@@ -1,0 +1,232 @@
+$colorPrimary: #222;
+$colorWhite: #fff;
+$colorFont: #5AC7C7;
+$colorFontActive: rgb(27, 150, 150);
+$colorBackground: rgb(39, 39, 48);
+$colorShadow: rgba(0, 0, 0, 0.6);
+$colorPageCenter: rgba(255, 255, 255, 0.92);
+$colorFacebook: #3b589e;
+$colorDarkFacebook: #213e81;
+$colorGoogle: #cf4129;
+$colorDarkGoogle: #962b18;
+$colorLock: #db0000;
+$sectionWebHeight: 90vh;
+$sectionMobileHeight: 500px;
+
+/*main*/
+main {
+    background: $colorBackground;
+}
+
+/*main banner*/
+.main-banner {
+    background: $colorWhite;
+    min-height: $sectionWebHeight;
+    height: auto;
+
+    .main-banner-img {
+        background-image: url(../img/page-center/banner.jpg);
+        min-height: $sectionWebHeight;
+        height: auto;
+        padding-bottom: 30px;
+        text-align: center;
+    }
+}
+
+/*page*/
+.page {
+    display: inline-block;
+    width: 100%;
+    max-width: 800px;
+    margin: 8% auto 0;
+    padding: 30px;
+    background: $colorPageCenter;
+    box-shadow: 0 2px 5px $colorShadow;
+    border-radius: 4px;
+    text-align: left;
+    overflow: hidden;
+    animation-delay: 0.5s;
+
+    .container-fluid {
+        width: 100%;
+        padding: 0;
+
+        /*標題*/
+        .page-title {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: $colorPrimary;
+            margin-bottom: 30px;
+            padding-left: 15px;
+            padding-bottom: 2px;
+            border-left: 5px solid $colorFont;
+        }
+
+        /*子標題*/
+        .page-subtitle {
+            font-size: 1.05em;
+            font-weight: 500;
+            color: $colorPrimary;
+            margin-bottom: 20px;
+
+            &.lock {
+                color: $colorLock;
+            }
+
+            &.unlock {
+                color: $colorFontActive;
+            }
+        }
+
+        /*第三方登入*/
+        .page-extralogin-area {
+            padding: 0 15px 20px;
+            font-size: 1.03em;
+
+            /*圖片*/
+            img {
+                width: 150px;
+                margin-bottom: 20px;
+            }
+        }
+
+        /*帳號設定*/
+        .page-setting-content {
+            font-size: 1.03em;
+            margin-bottom: 65px;
+        }
+
+        /*按鈕區塊*/
+        .form-btn-area {
+            margin-top: 20px;
+            padding-bottom: 40px;
+        }
+
+        /*按鈕*/
+        .page-btn {
+            display: block;
+            padding: 10px 50px;
+            background: $colorFont;
+            color: $colorWhite;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 4px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.5s;
+
+            i {
+                display: block;
+                float: left;
+                font-size: 1.6em;
+            }
+
+            span {
+                display: block;
+                margin-left: 37px;
+            }
+
+            &:hover {
+                background: $colorFontActive;
+                color: $colorWhite;
+            }
+
+            &.facebook,
+            &.google {
+                padding: 10px 30px;
+                margin-bottom: 20px;
+            }
+
+            &.facebook {
+                background: $colorFacebook;
+
+                &:hover {
+                    background: $colorDarkFacebook;
+                }
+            }
+
+            &.google {
+                background: $colorGoogle;
+
+                &:hover {
+                    background: $colorDarkGoogle;
+                }
+            }
+        }
+
+        input[type=submit].page-btn,
+        .page-btn.link {
+            float: right;
+        }
+
+        /*超連結*/
+        .page-hype-area {
+            float: left;
+            margin-bottom: 30px;
+        }
+
+        .page-hype-link {
+            display: inline-block;
+            margin-right: 3px;
+            font-size: 15px;
+            color: $colorPrimary;
+            text-decoration: none;
+
+            &:hover {
+                color: $colorFontActive;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    /*main banner*/
+    .main-banner {
+        min-height: $sectionMobileHeight;
+
+        .main-banner-img {
+            min-height: $sectionMobileHeight;
+        }
+    }
+
+    /*page*/
+    .page {
+        width: 100%;
+        max-width: 90%;
+
+        .container-fluid {
+
+            /*第三方登入*/
+            .page-extralogin-area {
+                padding: 0 0 20px;
+                text-align: justify;
+            }
+
+            /*帳號設定*/
+            .page-setting-content {
+                margin-bottom: 30px;
+            }
+
+            /*按鈕區塊*/
+            .form-btn-area {
+                padding-bottom: 10px;
+            }
+
+            /*按鈕*/
+            input[type=submit].page-btn,
+            .page-btn.link {
+                float: none;
+                width: 100%;
+            }
+
+            /*超連結*/
+            .page-hype-area {
+                float: none;
+                text-align: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,264 @@
+$colorWhite: #fff;
+$colorFontActive: rgb(27, 150, 150);
+$colorBackground: rgb(39, 39, 48);
+$colorPeopleTitle: rgba(255, 255, 255, 0.23);
+$sectionWebHeight: 650px;
+$sectionMobileHeight: 500px;
+
+/*main banner*/
+.main-banner {
+    .main-banner-img {
+        background-image: url(../img/people/banner.jpg);
+    }
+}
+
+/*people*/
+.people {
+    position: relative;
+    height: $sectionWebHeight;
+    background: $colorBackground;
+
+    .people-title-area {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 190px;
+        z-index: 200;
+        width: 250px;
+        margin: 0 auto;
+        text-align: center;
+        color: $colorWhite;
+        animation-delay: 1.2s;
+
+        /*icon*/
+        img {
+            width: 110px;
+            margin-bottom: 30px;
+        }
+
+        /*標題*/
+        .people-title {
+            font-size: 2.4em;
+            font-weight: 600;
+            background: $colorPeopleTitle;
+            border: 1px solid $colorWhite;
+            border-radius: 4px;
+            padding: 10px 0;
+            transition: background-color 0.5s;
+            cursor: pointer;
+
+            &:hover {
+                background: $colorFontActive;
+                border: 1px solid $colorFontActive;
+            }
+        }
+    }
+
+    .people-content-area {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 200;
+        margin: 0 auto;
+        padding: 60px;
+        overflow-y: auto;
+        display: none;
+
+        .people-content-close {
+            display: block;
+            position: absolute;
+            top: 12px;
+            height: 45px;
+            color: $colorWhite;
+            text-decoration: none;
+            font-size: 5em;
+            line-height: 0.3;
+            transition: all 0.4s ease;
+
+            &:hover {
+                transform: rotate(90deg);
+            }
+        }
+
+        ul,
+        li {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 1em;
+
+            h3 {
+                color: $colorWhite;
+                font-size: 1.5em;
+                font-weight: 600;
+            }
+
+            p {
+                color: $colorWhite;
+                font-size: 1.05em;
+                margin: 0;
+            }
+        }
+    }
+
+    .organizer-area,
+    .guest-area {
+        position: absolute;
+        top: 0;
+        width: 55.6%;
+        height: 100%;
+        overflow: hidden;
+
+        svg {
+            width: 100%;
+            height: 100%;
+
+            .image-delay {
+                animation-delay: 0.5s;
+            }
+
+            .rect-delay {
+                animation-delay: 1.1s;
+            }
+
+            .web {
+                display: block;
+            }
+
+            .mobile {
+                display: none;
+            }
+        }
+    }
+
+    /*主辦單位*/
+    .organizer-area {
+        left: 0;
+
+        .people-title-area {
+            right: 12%;
+        }
+
+        .people-content-area {
+            margin-right: 26%;
+            padding-right: 0;
+
+            .people-content-close {
+                left: 8px;
+            }
+        }
+    }
+
+    /*來賓*/
+    .guest-area {
+        right: 0;
+
+        .people-title-area {
+            left: 12%;
+        }
+
+        .people-content-area {
+            margin-left: 26%;
+            padding-left: 0;
+
+            .people-content-close {
+                right: 8px;
+            }
+        }
+    }
+}
+
+/*nicescroll*/
+.nicescroll-cursors {
+    background-color: $colorFontActive !important;
+    border-color: $colorFontActive !important;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    /*people*/
+    .people {
+        height: auto;
+
+        .people-title-area {
+            top: 130px;
+            width: 200px;
+
+            /*標題*/
+            .people-title {
+                font-size: 1.8em;
+            }
+        }
+
+        .people-content-area {
+            padding: 40px 30px;
+
+            .people-content-close {
+                top: 8px;
+                height: 30px;
+                font-size: 3.5em;
+            }
+        }
+
+        .organizer-area,
+        .guest-area {
+            position: relative;
+            top: auto;
+            width: 100%;
+            height: $sectionMobileHeight;
+
+            svg {
+                .web {
+                    display: none;
+                }
+
+                .mobile {
+                    display: block;
+                }
+            }
+        }
+
+        /*主辦單位*/
+        .organizer-area {
+            left: 0;
+
+            .people-title-area {
+                right: 0;
+            }
+
+            .people-content-area {
+                margin-right: 0;
+                padding-right: 30px;
+
+                .people-content-close {
+                    left: 2px;
+                }
+            }
+        }
+
+        /*來賓*/
+        .guest-area {
+            right: 0;
+
+            .people-title-area {
+                left: 0;
+            }
+
+            .people-content-area {
+                margin-left: 0;
+                padding-left: 30px;
+
+                .people-content-close {
+                    left: 2px;
+                    right: auto;
+                }
+            }
+        }
+    }
+}

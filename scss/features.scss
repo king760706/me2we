@@ -1,0 +1,309 @@
+$colorPrimary: #222;
+$colorWhite: #fff;
+$colorFontActive: rgb(27, 150, 150);
+$colorBackground: rgb(39, 39, 48);
+$sectionWebHeight: 650px;
+
+/*main*/
+main {
+    background: $colorBackground;
+}
+
+/*main banner*/
+.main-banner {
+    background: $colorWhite;
+
+    .main-banner-img {
+        background-image: url(../img/features/banner.jpg);
+    }
+}
+
+/*features*/
+.features {
+    position: relative;
+    display: block;
+    float: right;
+    width: 50%;
+    height: $sectionWebHeight;
+
+    /*features phone*/
+    .features-phone {
+        position: absolute;
+        left: -30px;
+        bottom: 80px;
+        z-index: 600;
+        width: 180px;
+    }
+
+    /*features screen*/
+    .features-screen {
+        position: absolute;
+        left: 40px;
+        bottom: 150px;
+        z-index: 400;
+        width: 550px;
+    }
+}
+
+/*主標題區塊*/
+.title-area {
+    position: absolute;
+    top: 200px;
+    z-index: 200;
+    color: $colorWhite;
+
+    h1 {
+        font-size: 2.4em;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    p {
+        margin: 0;
+        font-size: 1.3em;
+        font-weight: 400;
+    }
+}
+
+/*manager*/
+.manager {
+    position: relative;
+    height: $sectionWebHeight;
+    animation-delay: 0.3s;
+
+    .manager-img-area {
+        width: 50%;
+        height: $sectionWebHeight;
+        text-align: center;
+
+        /*manager phone*/
+        .manager-phone {
+            width: 500px;
+            margin: 20px auto 0;
+            margin-right: -15%;
+        }
+
+        /*show screen*/
+        .show-screen {
+            width: 650px;
+            margin: 120px auto 0;
+            margin-right: -15%;
+        }
+    }
+
+    /*主標題區塊*/
+    .title-area {
+        left: 58%;
+    }
+}
+
+/*customer*/
+.customer {
+    position: relative;
+    height: $sectionWebHeight;
+    background: $colorWhite;
+
+    .customer-img-area {
+        float: right;
+        width: 50%;
+        height: $sectionWebHeight;
+
+        /*customer phone*/
+        .customer-phone {
+            width: 550px;
+            margin-top: 50px;
+            margin-left: 5%;
+        }
+    }
+
+    /*主標題區塊*/
+    .title-area {
+        right: 58%;
+        color: $colorPrimary;
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+
+    /*main banner*/
+    .main-banner {
+
+        /*main title area*/
+        .main-title-area {
+            left: 8%;
+
+            h1 {
+                font-size: 2.7em;
+                margin-bottom: 5px;
+            }
+
+            p {
+                font-size: 1.7em;
+            }
+        }
+    }
+
+    /*features*/
+    .features {
+
+        /*features phone*/
+        .features-phone {
+            left: -65px;
+            bottom: 100px;
+            width: 150px;
+        }
+
+        /*features screen*/
+        .features-screen {
+            left: -15px;
+            bottom: 160px;
+            width: 500px;
+        }
+    }
+
+    /*主標題區塊*/
+    .title-area {
+        h1 {
+            font-size: 2.0em;
+        }
+
+        p {
+            font-size: 1.05em;
+        }
+    }
+
+    /*manager*/
+    .manager {
+        .manager-img-area {
+
+            /*show screen*/
+            .show-screen {
+                width: 500px;
+                margin: 140px auto 0;
+                margin-right: -5%;
+            }
+        }
+    }
+
+    /*customer*/
+    .customer {
+        .customer-img-area {
+
+            /*customer phone*/
+            .customer-phone {
+                width: 480px;
+                margin-top: 80px;
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    /*main banner*/
+    .main-banner {
+        height: auto;
+
+        /*main banner img*/
+        .main-banner-img {
+            height: auto;
+        }
+
+        /*main title area*/
+        .main-title-area {
+            left: 10%;
+            top: 300px;
+        }
+    }
+
+    /*features*/
+    .features {
+        float: none;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        padding-bottom: 20px;
+
+        /*features phone*/
+        .features-phone {
+            position: relative;
+            left: 0;
+            bottom: 0;
+            width: 45%;
+            margin: 430px auto 10px;
+        }
+
+        /*features screen*/
+        .features-screen {
+            position: relative;
+            left: 0;
+            bottom: 0;
+            width: 90%;
+        }
+    }
+
+    /*主標題區塊*/
+    .title-area {
+        top: 30px;
+
+        h1 {
+            font-size: 1.75em;
+            margin-bottom: 10px;
+        }
+    }
+
+    /*manager*/
+    .manager {
+        height: auto;
+
+        .manager-img-area {
+            width: 100%;
+            height: auto;
+
+            /*manager phone*/
+            .manager-phone {
+                width: 80%;
+                margin: 200px auto 30px;
+            }
+
+            /*show screen*/
+            .show-screen {
+                width: 90%;
+                margin: 200px auto 30px;
+            }
+        }
+
+        /*主標題區塊*/
+        .title-area {
+            left: 20px;
+            right: 20px;
+        }
+    }
+
+    /*customer*/
+    .customer {
+        height: auto;
+
+        .customer-img-area {
+            float: none;
+            width: 100%;
+            height: auto;
+            text-align: center;
+
+
+            /*customer phone*/
+            .customer-phone {
+                width: 80%;
+                margin: 200px auto 30px;
+            }
+        }
+
+        /*主標題區塊*/
+        .title-area {
+            left: 20px;
+            right: 20px;
+        }
+    }
+}

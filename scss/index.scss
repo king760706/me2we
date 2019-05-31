@@ -1,0 +1,917 @@
+$colorPrimary: #222;
+$colorWhite: #fff;
+$colorFontActive: rgb(27, 150, 150);
+$colorBackground: rgb(39, 39, 48);
+$colorShadow: rgba(0, 0, 0, 0.6);
+$colorTitleArea: rgba(255, 255, 255, 0.65);
+$colorBlue: rgba(90, 199, 199, 0.6);
+$colorYellow: rgba(255, 242, 144, 0.6);
+$colorPink: rgba(255, 175, 191, 0.6);
+$colorOtherLink: rgba(255, 255, 255, 0.23);
+$colorNewsDescription: #999;
+$colorNewsDate: #d10f71;
+$colorNewsMore: #5AC7C7;
+$sectionWebHeight: 650px;
+
+/*主標題區塊*/
+.title-area {
+    position: absolute;
+    left: 5%;
+    top: 200px;
+    z-index: 200;
+    color: $colorPrimary;
+
+    h1 {
+        font-size: 2.4em;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    p {
+        margin: 0;
+        font-size: 1.3em;
+        font-weight: 400;
+    }
+}
+
+/*banner*/
+.banner {
+    position: relative;
+    height: 90vh;
+
+    /*背景區塊*/
+    .banner-img {
+        position: relative;
+        background-image: url(../img/index/banner.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 90vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+        animation-delay: 0.3s;
+
+        /*手機*/
+        .phone {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -200px;
+            z-index: 400;
+            margin: 0 auto;
+            width: 650px;
+        }
+
+        /*大屏幕*/
+        .screen {
+            background-image: url(../img/index/screen.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-position: center;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -700px;
+            z-index: 400;
+            margin: 0 auto 30px;
+            width: 700px;
+            height: 400px;
+
+            .screen-img {
+                position: absolute;
+                width: 150px;
+                height: 200px;
+                background: $colorWhite;
+                box-shadow: 0 1px 3px $colorShadow;
+                padding: 15px;
+                display: none;
+
+                &:nth-of-type(1) {
+                    left: 14%;
+                    top: 22%;
+                    transform: rotate(30deg);
+                    z-index: 200;
+                }
+
+                &:nth-of-type(2) {
+                    right: 13%;
+                    top: 30%;
+                    transform: rotate(15deg);
+                    z-index: 400;
+                }
+
+                &:nth-of-type(3) {
+                    left: 40%;
+                    top: 26%;
+                    transform: rotate(-25deg);
+                    z-index: 600;
+                }
+
+                a {
+                    display: block;
+                    height: 100px;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                }
+
+                p {
+                    margin: 20px 0 0;
+                    text-align: center;
+                    word-break: break-all;
+                    font-size: 1.02em;
+                    line-height: 1.2;
+                }
+            }
+        }
+    }
+
+    /*主標題區塊*/
+    .title-area {
+        h1 {
+            animation-delay: 0.5s;
+        }
+
+        p {
+            animation-delay: 0.8s;
+        }
+    }
+}
+
+/*game*/
+.game {
+    position: relative;
+    height: $sectionWebHeight;
+
+    .game-img-area {
+        position: relative;
+        width: 50%;
+        height: $sectionWebHeight;
+        float: right;
+        background: $colorBackground;
+
+        /*sub title*/
+        h1 {
+            font-size: 2.4em;
+            font-weight: 400;
+            color: $colorWhite;
+            text-align: right;
+            margin: 90px 15% 0 0;
+            letter-spacing: 1px;
+        }
+
+        /*game phone*/
+        .game-phone {
+            position: absolute;
+            left: -40px;
+            bottom: 50px;
+            z-index: 400;
+            width: 200px;
+        }
+
+        /*game pad*/
+        .game-pad {
+            position: absolute;
+            left: 160px;
+            bottom: 46px;
+            z-index: 400;
+            width: 450px;
+        }
+    }
+}
+
+/*event*/
+.event {
+    position: relative;
+    height: $sectionWebHeight;
+
+    /*背景區塊*/
+    .event-img {
+        position: relative;
+        background-image: url(../img/index/event.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center top;
+        height: $sectionWebHeight;
+
+        .event-img-area {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 55%;
+            height: 100%;
+
+            /*event item*/
+            .event-item {
+                position: absolute;
+                z-index: 400;
+                border: 5px solid $colorTitleArea;
+                background: $colorTitleArea;
+                width: 300px;
+                height: 200px;
+
+                &:nth-of-type(1) {
+                    left: 0;
+                    right: 0;
+                    top: 90px;
+                    margin: auto;
+
+                    &.view-ninth .mask-1,
+                    &.view-ninth .mask-2 {
+                        background: $colorBlue;
+                    }
+                }
+
+                &:nth-of-type(2) {
+                    left: -310px;
+                    right: 0;
+                    top: 310px;
+                    margin: auto;
+
+                    &.view-ninth .mask-1,
+                    &.view-ninth .mask-2 {
+                        background: $colorYellow;
+                    }
+                }
+
+                &:nth-of-type(3) {
+                    left: 0;
+                    right: -310px;
+                    top: 310px;
+                    margin: auto;
+
+                    &.view-ninth .mask-1,
+                    &.view-ninth .mask-2 {
+                        background: $colorPink;
+                    }
+                }
+
+                &:hover h1 {
+                    bottom: -45px;
+                }
+
+                .event-item-img {
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    height: 190px;
+                }
+
+                h1 {
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: -8px;
+                    font-size: 1.3em;
+                    font-weight: 400;
+                    padding: 7px 0;
+                    text-align: center;
+                    background: $colorShadow;
+                    color: $colorWhite;
+                    transition: all 0.3s ease-in-out 0.3s;
+                }
+            }
+        }
+    }
+
+    /*主標題區塊*/
+    .title-area {
+        left: auto;
+        right: 10%;
+    }
+}
+
+/*album*/
+.album {
+    position: relative;
+    height: $sectionWebHeight;
+
+    .album-img-area {
+        position: relative;
+        width: 50%;
+        height: $sectionWebHeight;
+        float: right;
+        // display: flex;
+        // -webkit-align-items: center;
+        // align-items: center;
+        // -webkit-justify-content: center;
+        // justify-content: center;
+
+        /*sub title*/
+        h1,
+        p {
+            position: absolute;
+            z-index: 600;
+            right: 9%;
+            color: $colorPrimary;
+        }
+
+        h1 {
+            top: 55px;
+            font-size: 2.0em;
+            font-weight: 600;
+        }
+
+        p {
+            top: 105px;
+            font-size: 1.3em;
+            text-align: right;
+        }
+
+        .album-item {
+            position: absolute;
+            bottom: 0;
+            margin: auto;
+
+            /*album1*/
+            &:nth-of-type(1) {
+                left: -50px;
+                top: -100px;
+                z-index: 200;
+                width: 50%;
+            }
+
+            /*album2*/
+            &:nth-of-type(2) {
+                right: 7%;
+                top: 130px;
+                z-index: 400;
+                width: 55%;
+            }
+        }
+
+        /*album phone*/
+        .album-phone {
+            position: absolute;
+            left: 29%;
+            top: 0;
+            bottom: 0;
+            z-index: 600;
+            width: 24%;
+            margin: auto;
+        }
+    }
+}
+
+/*other*/
+.other {
+    position: relative;
+    height: $sectionWebHeight;
+
+    /*背景區塊*/
+    .other-img {
+        position: relative;
+        background-image: url(../img/index/other.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center top;
+        height: $sectionWebHeight;
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+
+        .other-img-area {
+            display: flex;
+
+            .other-link {
+                display: flex;
+                flex-direction: column;
+                -webkit-align-items: center;
+                align-items: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                width: 250px;
+                height: 250px;
+                margin-right: 80px;
+                background: $colorOtherLink;
+                border: 1px solid $colorWhite;
+                border-radius: 4px;
+                color: $colorWhite;
+                font-size: 1.7em;
+                text-decoration: none;
+                transition: background-color 0.5s;
+
+                i {
+                    font-size: 3.2em;
+                    display: block;
+                    margin-bottom: 20px;
+                }
+
+                &:nth-of-type(2) {
+                    margin-right: 0;
+
+                    i {
+                        font-size: 4.2em;
+                        margin-bottom: -5px;
+                    }
+                }
+
+                &:hover,
+                &:focus {
+                    background: $colorPrimary;
+                    border: 1px solid $colorPrimary;
+                    color: $colorFontActive;
+                }
+            }
+        }
+    }
+}
+
+/*news*/
+.news {
+    position: relative;
+    background: $colorBackground;
+    text-align: center;
+    padding: 40px 0;
+
+    /*主標題區塊*/
+    .title-area {
+        position: relative;
+        left: 0;
+        right: 0;
+        top: 0;
+        margin: 0 auto;
+        color: $colorWhite;
+    }
+
+    /*內容區塊*/
+    .news-area {
+        max-width: 1160px;
+        margin: 0 auto;
+        padding: 20px;
+
+        .news-item {
+            display: block;
+            width: 23%;
+            margin-bottom: 10px;
+            padding: 7px;
+            background: $colorWhite;
+            box-shadow: 0 2px 5px $colorShadow;
+            border-radius: 4px;
+            text-decoration: none;
+            overflow: hidden;
+            transition: background-color 0.5s;
+
+            .news-item-img {
+                overflow: hidden;
+                transition: all 0.5s;
+
+                img {
+                    transition: all 0.4s;
+                }
+            }
+
+            .news-item-content {
+                padding: 20px;
+                word-break: break-all;
+
+                h3 {
+                    color: $colorPrimary;
+                    font-size: 1.2em;
+                    margin-bottom: 20px;
+                    line-height: 1.43;
+                    text-align: left;
+                }
+
+                p {
+                    color: $colorNewsDescription;
+                    font-size: 14px;
+                    text-align: justify;
+                    margin-bottom: 20px;
+                }
+
+                .news-item-date {
+                    font-size: 14px;
+                    float: left;
+                    color: $colorNewsDate;
+                }
+
+                .news-item-more {
+                    font-size: 14px;
+                    float: right;
+                    color: $colorNewsMore;
+                }
+            }
+
+            &:hover {
+                background: $colorFontActive;
+
+                .news-item-img {
+                    background: $colorWhite;
+
+                    img {
+                        opacity: 0.85;
+                        transform: scale(1.2);
+                    }
+                }
+
+                .news-item-content {
+                    padding: 20px;
+                    word-break: break-all;
+
+                    p {
+                        color: $colorWhite;
+                    }
+
+                    .news-item-more {
+                        -webkit-animation: move 0.5s;
+                        animation: move 0.5s;
+                        color: $colorWhite;
+                    }
+                }
+            }
+        }
+    }
+
+    /*更多消息*/
+    .news-more {
+        display: inline-block;
+        margin: 50px auto 10px;
+        padding: 10px 50px;
+        background: $colorOtherLink;
+        color: $colorWhite;
+        font-size: 1.1em;
+        border: 1px solid $colorWhite;
+        border-radius: 4px;
+        text-decoration: none;
+        transition: background-color 0.5s;
+
+        &:hover,
+        &:focus {
+            background: $colorFontActive;
+            border: 1px solid $colorFontActive;
+        }
+    }
+}
+
+@-webkit-keyframes move {
+    0% {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+        color: $colorWhite;
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(50%);
+        opacity: 10;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+        color: $colorWhite;
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+
+    /*主標題區塊*/
+    .title-area {
+        h1 {
+            font-size: 2.0em;
+        }
+
+        p {
+            font-size: 1.05em;
+        }
+    }
+
+    /*game*/
+    .game {
+        .game-img-area {
+
+            /*sub title*/
+            h1 {
+                margin: 80px 10% 0 0;
+                font-size: 2.0em;
+            }
+
+            /*game phone*/
+            .game-phone {
+                left: -30px;
+                width: 170px;
+            }
+
+            /*game pad*/
+            .game-pad {
+                left: 140px;
+                width: 340px;
+            }
+        }
+    }
+
+    /*event*/
+    .event {
+        height: 680px;
+
+        /*背景區塊*/
+        .event-img {
+            height: 680px;
+
+            .event-img-area {
+                width: 45%;
+
+                /*event item*/
+                .event-item {
+                    &:nth-of-type(1) {
+                        top: 30px;
+                    }
+
+                    &:nth-of-type(2) {
+                        left: 0;
+                        top: 240px;
+                    }
+
+                    &:nth-of-type(3) {
+                        right: 0;
+                        top: 450px;
+                    }
+                }
+            }
+        }
+
+        /*主標題區塊*/
+        .title-area {
+            right: 5%;
+            background: $colorTitleArea;
+            padding: 30px 20px;
+        }
+    }
+
+    /*album*/
+    .album {
+        .album-img-area {
+
+            /*sub title*/
+            h1,
+            p {
+                right: 8%;
+            }
+
+            h1 {
+                top: 100px;
+                font-size: 1.7em;
+            }
+
+            p {
+                top: 145px;
+                font-size: 1.05em;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    /*主標題區塊*/
+    .title-area {
+        left: 20px;
+        right: 20px;
+        top: 30px;
+
+        h1 {
+            font-size: 1.75em;
+            margin-bottom: 10px;
+        }
+    }
+
+    /*banner*/
+    .banner {
+        height: 600px;
+
+
+        /*背景區塊*/
+        .banner-img {
+            height: 600px;
+
+            /*手機*/
+            .phone {
+                bottom: -100px;
+                width: 320px;
+            }
+
+            /*大屏幕*/
+            .screen {
+                bottom: -420px;
+                margin: 0 auto 150px;
+                width: 220px;
+                height: 150px;
+
+                .screen-img {
+                    width: 50px;
+                    height: 80px;
+                    padding: 10px 5px;
+                    display: none;
+
+                    &:nth-of-type(1) {
+                        left: 16%;
+                        top: 22%;
+                    }
+
+                    &:nth-of-type(2) {
+                        right: 13%;
+                        top: 28%;
+                    }
+
+                    &:nth-of-type(3) {
+                        left: 40%;
+                        top: 25%;
+                    }
+
+                    a {
+                        height: 30px;
+                    }
+
+                    p {
+                        margin: 5px 0 0;
+                        text-align: center;
+                        word-break: break-all;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+
+    /*game*/
+    .game {
+        height: auto;
+        padding-top: 220px;
+
+        .game-img-area {
+            width: 100%;
+            height: auto;
+            float: none;
+            text-align: center;
+            padding-bottom: 30px;
+
+            /*sub title*/
+            h1 {
+                font-size: 1.5em;
+                margin: 30px 20px 20px;
+                text-align: left;
+            }
+
+            /*game phone*/
+            .game-phone {
+                position: relative;
+                left: 0;
+                bottom: 0;
+                width: 45%;
+                margin: -30px auto 5px;
+            }
+
+            /*game pad*/
+            .game-pad {
+                position: relative;
+                left: 0;
+                bottom: 0;
+                width: 90%;
+            }
+        }
+    }
+
+    /*event*/
+    .event {
+        height: auto;
+
+        /*背景區塊*/
+        .event-img {
+            height: auto;
+            padding-top: 335px;
+
+            .event-img-area {
+                position: relative;
+                width: 100%;
+                height: 680px;
+            }
+        }
+
+        /*主標題區塊*/
+        .title-area {
+            left: 15px;
+            right: 15px;
+            background: $colorTitleArea;
+            padding: 30px 20px;
+        }
+    }
+
+    /*album*/
+    .album {
+        height: auto;
+        padding-top: 200px;
+
+        .album-img-area {
+            width: 100%;
+            height: 1050px;
+            float: none;
+
+            /*sub title*/
+            h1,
+            p {
+                left: 20px;
+                right: 20px;
+            }
+
+            h1 {
+                top: 365px;
+                font-size: 1.5em;
+            }
+
+            p {
+                top: 720px;
+                text-align: left;
+            }
+
+            .album-item {
+                margin-top: 0;
+
+                /*album1*/
+                &:nth-of-type(1) {
+                    left: 0;
+                    right: 0;
+                    top: 415px;
+                    width: 300px;
+                }
+
+                /*album2*/
+                &:nth-of-type(2) {
+                    left: 0;
+                    right: 0;
+                    top: 788px;
+                    width: 300px;
+                }
+            }
+
+            /*album phone*/
+            .album-phone {
+                left: 0;
+                right: 0;
+                width: 170px;
+                margin-top: 0;
+            }
+        }
+    }
+
+    /*other*/
+    .other {
+        height: auto;
+
+        /*背景區塊*/
+        .other-img {
+            height: auto;
+            padding: 40px 0;
+
+            .other-img-area {
+                flex-direction: column;
+
+                .other-link {
+                    width: 200px;
+                    height: 200px;
+                    margin-right: 0;
+                    margin-bottom: 30px;
+                    font-size: 1.5em;
+
+                    i {
+                        font-size: 2.8em;
+                        display: block;
+                        margin-bottom: 20px;
+                    }
+
+                    &:nth-of-type(2) {
+                        margin-bottom: 0;
+
+                        i {
+                            font-size: 3.7em;
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /*news*/
+    .news {
+        padding: 30px 0 20px;
+
+        /*內容區塊*/
+        .news-area {
+            .news-item {
+                width: auto;
+                left: 10px !important;
+                right: 10px;
+            }
+        }
+    }
+}

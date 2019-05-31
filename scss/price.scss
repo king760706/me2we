@@ -1,0 +1,203 @@
+$colorPrimary: #222;
+$colorWhite: #fff;
+$colorFont: #5AC7C7;
+$colorFontActive: rgb(27, 150, 150);
+$colorBackground: rgb(39, 39, 48);
+$colorShadow: rgba(0, 0, 0, 0.6);
+$colorPriceTWD: #888;
+$priceItemWebHeight: 350px;
+$priceItemMobileHeight: 220px;
+
+/*main*/
+main {
+    background: $colorBackground;
+}
+
+/*main banner*/
+.main-banner {
+    background: $colorWhite;
+
+    .main-banner-img {
+        background-image: url(../img/price/banner.jpg);
+        text-align: center;
+    }
+}
+
+/*price*/
+.price {
+    display: inline-block;
+    width: 100%;
+    max-width: 900px;
+    margin: 530px auto 0;
+
+    ul,
+    li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        background: $colorWhite;
+        box-shadow: 0 2px 5px $colorShadow;
+        border-radius: 4px;
+        margin-bottom: 20px;
+        overflow: hidden;
+
+        /*圖片*/
+        .price-item-img {
+            display: block;
+            width: 60%;
+            height: $priceItemWebHeight;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: center top;
+            transition: all 0.4s ease;
+
+            &:hover {
+                background-size: 105%;
+            }
+        }
+
+        /*內容*/
+        .price-item-content {
+            width: 40%;
+            height: $priceItemWebHeight;
+            padding: 3em 1em;
+
+            h3 {
+                font-size: 1.43em;
+                font-weight: 600;
+                color: $colorPrimary;
+                margin-bottom: 1.3em;
+                letter-spacing: 1px;
+
+                span {
+                    display: block;
+                    position: relative;
+
+                    &:before,
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        top: 51%;
+                        background: $colorFont;
+                        width: 15%;
+                        height: 1px;
+                    }
+
+                    &:before {
+                        left: 20%;
+                    }
+
+                    &::after {
+                        right: 20%;
+                    }
+                }
+            }
+
+            .price-TWD {
+                font-size: 1.1em;
+                color: $colorPriceTWD;
+                margin: 0;
+                letter-spacing: 1px;
+            }
+
+            /*了解詳情*/
+            .price-item-more {
+                display: inline-block;
+                width: 50%;
+                margin-top: 6.5em;
+                padding: 10px 0;
+                color: $colorFont;
+                border: 1px solid $colorFont;
+                font-size: 1.1em;
+                border-radius: 4px;
+                text-decoration: none;
+                transition: background-color 0.5s;
+
+                &:hover,
+                &:focus {
+                    background: $colorFontActive;
+                    border: 1px solid $colorFontActive;
+                    color: $colorWhite;
+                }
+            }
+        }
+
+        &:nth-child(odd) {
+
+            /*圖片*/
+            .price-item-img {
+                float: left;
+            }
+
+            /*內容*/
+            .price-item-content {
+                float: right;
+            }
+        }
+
+        &:nth-child(even) {
+
+            /*圖片*/
+            .price-item-img {
+                float: right;
+            }
+
+            /*內容*/
+            .price-item-content {
+                float: left;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    /*price*/
+    .price {
+        max-width: 90%;
+        margin: 430px auto 0;
+
+        li {
+
+            /*圖片*/
+            .price-item-img {
+                width: 100%;
+                height: $priceItemMobileHeight;
+            }
+
+            /*內容*/
+            .price-item-content {
+                width: 100%;
+                height: $priceItemMobileHeight;
+                padding: 1.5em 1em;
+
+                h3 {
+                    margin-bottom: 1.2em;
+
+                    span {
+                        display: block;
+                        position: relative;
+
+                        &:before {
+                            left: 19%;
+                        }
+
+                        &::after {
+                            right: 19%;
+                        }
+                    }
+                }
+
+                /*了解詳情*/
+                .price-item-more {
+                    width: 153px;
+                    margin-top: 2.2em;
+                }
+            }
+        }
+    }
+}
